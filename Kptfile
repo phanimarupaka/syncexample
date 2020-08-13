@@ -1,0 +1,13 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: somedir
+packageMetadata:
+    shortDescription: sample description
+dependencies:
+  - name: hello-world
+    git:
+        repo: https://github.com/GoogleContainerTools/kpt
+        directory: /package-examples/helloworld-set
+        ref: master
+    updateStrategy: resource-merge
